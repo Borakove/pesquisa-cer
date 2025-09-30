@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação - CER Colinas do Tocantins</title>
+    <link rel="stylesheet" href="frontend/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1 class="title">PESQUISA DE SATISFAÇÃO</h1>
+        <p class="description">Esse questionário avalia a satisfação de usuários do serviço do Centro Especializado em Reabilitação de Colinas do Tocantins.</p>
+        <p class="required-note">* Indica uma pergunta obrigatória.</p>
+    </div>
+
+    <div id="feedback-message" class="feedback-message hidden"></div>
+
+    <form id="pesquisaForm">
+        <div class="form-section card">
+            <h2 class="section-title">1. Informações Básicas</h2>
+
+            <div class="form-group">
+                <label for="nome" class="question-title">1. Nome (Opcional)</label>
+                <input type="text" id="nome" name="nome" class="text-input" placeholder="Sua resposta">
+            </div>
+
+            <div class="form-group">
+                <label for="cpf" class="question-title required">2. CPF *</label>
+                <input type="text" id="cpf" name="cpf" class="text-input" placeholder="000.000.000-00" maxlength="14" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dataPreenchimento" class="question-title required">3. Data de Preenchimento *</label>
+                <input type="date" id="dataPreenchimento" name="dataPreenchimento" class="text-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title required">4. Quem está prestando as informações? *</label>
+                <div class="radio-options">
+                    <label><input type="radio" name="quemPrestaInformacao" value="Paciente" required>Paciente</label>
+                    <label><input type="radio" name="quemPrestaInformacao" value="Responsável">Responsável</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="question-title required">5. Qual setor de reabilitação foi utilizado? (Pode selecionar mais de um) *</label>
+                <div class="checkbox-options">
+                    <label><input type="checkbox" name="setorReabilitacao" value="Reabilitação Auditiva">Reabilitação Auditiva</label>
+                    <label><input type="checkbox" name="setorReabilitacao" value="Reabilitação Física">Reabilitação Física</label>
+                    <label><input type="checkbox" name="setorReabilitacao" value="Reabilitação Intelectual">Reabilitação Intelectual</label>
+                    <label><input type="checkbox" name="setorReabilitacao" value="Reabilitação Visual">Reabilitação Visual</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section card">
+            <h2 class="section-title">2. Classificação de Satisfação (0 a 10)</h2>
+
+            <div class="rating-group">
+                <label class="question-title required">6. TRIAGEM *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoTriagem" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoTriagem" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label class="question-title required">7. CONSULTA MÉDICA *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoConsultaMedica" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label class="question-title required">8. AVALIAÇÃO/EXAMES *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoAvaliacoesExames" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label class="question-title required">9. ATENDIMENTO MULTIDISCIPLINAR *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoAtendimentoMultidisciplinar" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+            
+            <div class="rating-group">
+                <label class="question-title required">10. LIMPEZA *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoLimpeza" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoLimpeza" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+
+            <div class="rating-group">
+                <label class="question-title required">11. ACOMODAÇÕES *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoAcomodacoes" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+            
+            <div class="rating-group">
+                <label class="question-title required">12. SATISFAÇÃO GERAL *</label>
+                <div class="rating-scale">
+                    <span>0 (Ruim)</span>
+                    <div class="ratings">
+                        <label><input type="radio" name="satisfacaoGeral" value="0" required><span>0</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="1"><span>1</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="2"><span>2</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="3"><span>3</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="4"><span>4</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="5"><span>5</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="6"><span>6</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="7"><span>7</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="8"><span>8</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="9"><span>9</span></label>
+                        <label><input type="radio" name="satisfacaoGeral" value="10"><span>10</span></label>
+                    </div>
+                    <span>10 (Excelente)</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="criticasSugestoes" class="question-title">13. CRÍTICAS, SUGESTÕES ou ELOGIOS (opcional)</label>
+                <textarea id="criticasSugestoes" name="criticasSugestoes" class="text-input" rows="4" placeholder="Texto de resposta longa"></textarea>
+            </div>
+        </div>
+
+        <div class="form-section card">
+            <p class="final-message">Agradecemos sua disponibilidade. Sua avaliação é importante para nós!</p>
+        </div>
+
+        <button type="submit" id="submitBtn" class="submit-button">Enviar</button>
+    </form>
+    <script src="js/script.js"></script>
+</body>
+</html>
